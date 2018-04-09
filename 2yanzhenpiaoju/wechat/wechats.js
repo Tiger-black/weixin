@@ -67,3 +67,15 @@ Wechats.prototype.updateAccessToken = function(data){ //更新的时候就去请
 	})
 }
 module.exports = Wechats;
+
+
+	var noncestr='Wm3WZYTPz0wzccnW'//
+	var jsapi_ticket='sM4AOVdWfPE4DxkXGEs8VMCPGGVi4C3VM0P37wVUCFvkVAy_90u5h9nbSlYy3-Sl-HhTdfl2fzFy1AOcHKP7qg'
+	var timestamp=1414587457
+	var url = window.location.href;
+	var signature=sha1(
+	'jsapi_ticket='+jsapi_ticket+'&noncestr='+noncestr+'&timestamp='+timestamp+'&url='+url.substr(0,url.indexOf('#'))
+	)
+
+
+

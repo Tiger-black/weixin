@@ -30,7 +30,7 @@ module.exports = function(opts){
 					this.body='wrong';
 					return false;
 				}
-				var data = yield getRawBody(this.req,{
+				var data = yield getRawBody(this.req,{//转换数据格式
 					length:this.length,
 					limit:'1mb',
 					encoding:this.charset
@@ -52,7 +52,7 @@ module.exports = function(opts){
 									'<Content><![CDATA[欢迎来到我的酒馆]]></Content>'+
 									'</xml>'
 
-				console.log(that.body)
+						console.log(that.body)
 						return
 					}
 				}
